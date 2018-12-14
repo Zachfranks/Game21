@@ -12,19 +12,36 @@ using System.Windows.Forms;
 namespace GameOf21
 {
     public partial class Game21 : Form
-    {       
+    { 
+        //create an empty list of card images
+        List<Image> listCardImages = new List<Image>();
+        List<int> listCardValues = new List<int>();
+        int hitCounter;
+
+        Random cardIndexGen;
+
         public Game21()
         {
-            InitializeComponent();                        
+            InitializeComponent();
+            cardIndexGen = new Random();
         }
 
-        public int DealCards(int Cards)
+        private int DealCards(int total)
         {
-            Random RNDCard = new Random();
+            //declare local variables
+            int card;
 
-            
+            //this is the lenght of the list
+            card = cardIndexGen.Next(0, listCardImages.Count());
 
-            return Cards;
+            //
+            picPlayerCard1.Image = listCardImages[card];
+            total += listCardValues[card];
+
+            listCardImages.RemoveAt(card);
+            listCardValues.RemoveAt(card);
+
+            return total;
         }
 
         //moving the vaule form intro from to this form
@@ -33,18 +50,9 @@ namespace GameOf21
             int totalbet = introGame21.totalbet;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-            int totalbet = introGame21.totalbet;
-            label1.Text = "$" + string.Format("{0:0.00}", totalbet);
-        }
 
         public void Game21_Load(object sender, EventArgs e)
         {
-            //create an empty list of card images
-            List<Image> listCardImages = new List<Image>();
-            List<int> listCardValues = new List<int>();
-
             //card image to the list
 
             listCardImages.Add(Properties.Resources.AC);
@@ -182,10 +190,11 @@ namespace GameOf21
 
         private void btnhit_Click(object sender, EventArgs e)
         {
-            int hit = 0;
+            hitCounter++;
 
 
-            hit = DealCards(hit);
+            
+            //hit = DealCards(hit);
         }
     }
 }
