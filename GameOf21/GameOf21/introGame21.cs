@@ -15,7 +15,7 @@ namespace GameOf21
     {
         //global veubles
         public int bet = 0;
-        public static int totalbet = 0;
+        public static double totalbet = 0;
 
         public introGame21()
         {

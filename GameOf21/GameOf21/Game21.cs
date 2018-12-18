@@ -16,7 +16,10 @@ namespace GameOf21
         //create an empty list of card images
         List<Image> listCardImages = new List<Image>();
         List<int> listCardValues = new List<int>();
+
+        //globla verubles
         int hitCounter;
+        double totalbet = introGame21.totalbet;
 
         Random cardIndexGen;
 
@@ -47,9 +50,44 @@ namespace GameOf21
         //moving the vaule form intro from to this form
         private void button1_Click(object sender, EventArgs e)
         {
-            int totalbet = introGame21.totalbet;
+
+
         }
 
+
+
+
+        private void btnhit_Click(object sender, EventArgs e)
+        {
+            hitCounter++;
+
+            //hit = DealCards(hit);
+        }
+
+        private void btndowndown_Click(object sender, EventArgs e)
+        {
+            /*
+            if (totaldealer == totalplayer)
+            {
+                MessageBox.Show("tie" + "you get youir money back");
+            }
+            else if (totaldealer > 21)
+            {
+                 totalbet = totalbet * 1.3;
+                 MessageBox.Show(string.Format("you win " + "$" +"{0:0.00}", totalbet));
+            }
+            else if (totaldealer > totalplayer)
+            {
+                 totalbet = 0;
+                 MessageBox.Show(string.Format("dealer win " + "$" + "{0:0.00}", totalbet));
+            }
+            else if (totaldealer < totalplayer)
+            {
+                totalbet = totalbet * 1.3;
+                 MessageBox.Show(string.Format("you win " + "$" + "{0:0.00}", totalbet));
+            }
+            */
+        }
 
         public void Game21_Load(object sender, EventArgs e)
         {
@@ -166,11 +204,6 @@ namespace GameOf21
             listCardValues.Add(9);
             listCardValues.Add(9);
             listCardValues.Add(9);
-           
-            listCardValues.Add(10);
-            listCardValues.Add(10);
-            listCardValues.Add(10);
-            listCardValues.Add(10);
 
             listCardValues.Add(10);
             listCardValues.Add(10);
@@ -186,15 +219,11 @@ namespace GameOf21
             listCardValues.Add(10);
             listCardValues.Add(10);
             listCardValues.Add(10);
-        }
 
-        private void btnhit_Click(object sender, EventArgs e)
-        {
-            hitCounter++;
-
-
-            
-            //hit = DealCards(hit);
+            listCardValues.Add(10);
+            listCardValues.Add(10);
+            listCardValues.Add(10);
+            listCardValues.Add(10);
         }
     }
 }

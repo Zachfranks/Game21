@@ -42,6 +42,7 @@
             this.picPlayerCard5 = new System.Windows.Forms.PictureBox();
             this.picDealerCard5 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnDoubleDown = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayerCard3)).BeginInit();
@@ -75,9 +76,9 @@
             // 
             // btnhit
             // 
-            this.btnhit.Location = new System.Drawing.Point(113, 589);
+            this.btnhit.Location = new System.Drawing.Point(12, 634);
             this.btnhit.Name = "btnhit";
-            this.btnhit.Size = new System.Drawing.Size(75, 23);
+            this.btnhit.Size = new System.Drawing.Size(87, 31);
             this.btnhit.TabIndex = 4;
             this.btnhit.Text = "Hit";
             this.btnhit.UseVisualStyleBackColor = true;
@@ -112,7 +113,7 @@
             // 
             // btnstay
             // 
-            this.btnstay.Location = new System.Drawing.Point(212, 589);
+            this.btnstay.Location = new System.Drawing.Point(16, 707);
             this.btnstay.Name = "btnstay";
             this.btnstay.Size = new System.Drawing.Size(75, 23);
             this.btnstay.TabIndex = 8;
@@ -182,11 +183,22 @@
             this.label2.TabIndex = 15;
             this.label2.Text = "Palyer";
             // 
+            // btnDoubleDown
+            // 
+            this.btnDoubleDown.Location = new System.Drawing.Point(105, 634);
+            this.btnDoubleDown.Name = "btnDoubleDown";
+            this.btnDoubleDown.Size = new System.Drawing.Size(86, 31);
+            this.btnDoubleDown.TabIndex = 16;
+            this.btnDoubleDown.Text = "Double down";
+            this.btnDoubleDown.UseVisualStyleBackColor = true;
+            this.btnDoubleDown.Click += new System.EventHandler(this.btndowndown_Click);
+            // 
             // Game21
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(682, 752);
+            this.Controls.Add(this.btnDoubleDown);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.picDealerCard5);
             this.Controls.Add(this.picPlayerCard5);
@@ -234,5 +246,6 @@
         private System.Windows.Forms.PictureBox picPlayerCard5;
         private System.Windows.Forms.PictureBox picDealerCard5;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnDoubleDown;
     }
 }
